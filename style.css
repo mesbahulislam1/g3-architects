@@ -84,7 +84,8 @@ main > section {
   width: 100%;
 }
 
-main {
+main,
+footer {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -95,7 +96,10 @@ main {
 .team-img-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  gap: 20px;
+}
+.team-img-container img{
+  width: 100%;
 }
 
 .our-features {
@@ -114,10 +118,9 @@ main {
 
 .fact {
   border: 1px solid #ff900e;
-  width: 240px;
+ width: 230px;
   height: 240px;
   border-radius: 8px;
-
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -126,7 +129,8 @@ main {
 .fact-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 10px;
+  
 }
 .fact-number {
   font-size: 2.8rem;
@@ -162,31 +166,56 @@ main {
   border-left: 5px solid #ff900e;
 }
 
-.feature-card{
+.feature-card {
   padding: 30px;
   box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
   margin-bottom: 20px;
   border-radius: 8px;
-
-
 }
-.feature-card .feature-title{
-font-weight: 600;
-font-size: 1.25rem;
-margin-top: 0;
-margin-bottom: 0;
-
+.feature-card .feature-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.features{
+.features {
   gap: 140px;
 }
+
+#experience-bage {
+  padding: 45px 42px;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-left: -100px;
+  margin-top: -100px;
+}
+#experience-year {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.features-architec img {
+  width: 100%;
+}
+
+footer {
+  background-color: #fff4e7;
+  padding: 40px 0;
+  text-align: center;
+  margin-top: 100px;
+}
+footer p {
+  font-size: 20px;
+}
+
 
 
 
 @media screen and (max-width: 576px) {
   .navbar,
-  .nav-links {
+  .nav-links,
+  .features {
     flex-direction: column;
   }
   .treams {
@@ -209,10 +238,16 @@ margin-bottom: 0;
     grid-template-columns: 1fr;
     justify-items: center;
   }
+  #experience-bage {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
 }
 
+
 @media screen and (min-width: 576px) and (max-width: 992px) {
-  .treams {
+  .treams,
+  .features, .navbar {
     flex-direction: column;
   }
   .our-features {
@@ -222,5 +257,14 @@ margin-bottom: 0;
   .fact-container {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
+  }
+  #experience-bage {
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  .fact-container{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
   }
 }
