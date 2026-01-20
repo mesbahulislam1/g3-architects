@@ -33,6 +33,7 @@ main > section {
   font-size: 1.25rem;
   border-radius: 8px;
   border: none;
+  cursor: pointer;
 }
 
 .text-gray {
